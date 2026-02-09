@@ -1,0 +1,25 @@
+{
+  "version": "v1.0.0",
+  "description": "A privacy-first AI meeting assistant that captures, transcribes, and summarizes meetings entirely on your infrastructure. Built by expert AI engineers passionate about data sovereignty and open source solutions. Perfect for enterprises that need advanced meeting intelligence without compromising on privacy, compliance, or control.",
+  "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-meeting-minutes",
+  "url": [
+    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIV_Application/Meetily/meetily_0.1.1_x64-setup.exe",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/start.ps1",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/stop.ps1",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/status.ps1"
+  ],
+  "hash": [
+    "087f4f2dc465c57c1fedc2f473fa7521707c690d5aa33bcf60b055e2cda6d6ec",
+    "150AB7FFE14E878902929EB9B5D7F616FCB70AD038DE62EAF7E1062506977288",
+    "C1A0A38F1493D96EBFCC9725BD1B5B2520DE4BB6AF6FEFC61403C8BCD388D5C1",
+    "C827F3FF772D02DE90668419A1F0AE13C986222C22191F6D19721F2D106D654B"
+  ],
+  "installer": {
+    "script": ["& \"$dir\\meetily_0.1.1_x64-setup.exe\" /S /D=\"$dir\\meetily\""]
+  },
+  "pre_uninstall": [
+    "if (Test-Path \"$dir\\stop.ps1\") { & \"$dir\\stop.ps1\" | Out-Null; Start-Sleep -Seconds 2 }",
+    "if (Test-Path \"$dir\\meetily\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\meetily\\uninstall.exe\" -ArgumentList '/S' }",
+    "if (Test-Path \"$dir\\status.ps1\") { Remove-Item -Path \"$dir\\status.ps1\" -Force -ErrorAction SilentlyContinue }"
+  ]
+}

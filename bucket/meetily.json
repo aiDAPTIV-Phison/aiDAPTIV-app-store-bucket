@@ -3,13 +3,13 @@
   "description": "A privacy-first AI meeting assistant that captures, transcribes, and summarizes meetings entirely on your infrastructure. Built by expert AI engineers passionate about data sovereignty and open source solutions. Perfect for enterprises that need advanced meeting intelligence without compromising on privacy, compliance, or control.",
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-meeting-minutes",
   "url": [
-    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIV_Application/Meetily/meetily_0.1.1_x64-setup.exe",
+    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/Meetily/meetily_0.1.1_x64-setup.exe",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/start.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/stop.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/status.ps1"
   ],
   "hash": [
-    "15b1f48d0184fe139bb5b7c3f90bebb9c53f30aaf7f45e61f15603f4454d6dc8",
+    "12BD089E444BBCEA975B530E43D9194DFD834F2E76DFF9F908EE5EFABA359386",
     "30c6bd6d48795b8438c55faed0e95b0277cb0a592026df326df198c986cf20f5",
     "32c9a4d1fe8bb24d6604a7f9b4429bd9cd06a985056849983654bc3879b0bf0a",
     "e8d36f269522c6eb4eb5bc7397efdaced18cfe5f394912b8f725408edc0be7dd"

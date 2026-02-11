@@ -4,9 +4,9 @@
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-meeting-minutes",
   "url": [
     "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/Meetily/meetily_0.1.1_x64-setup.exe",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/start.ps1",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/stop.ps1",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/status.ps1"
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/meetily/start.ps1",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/meetily/stop.ps1",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/meetily/status.ps1"
   ],
   "hash": [
     "12BD089E444BBCEA975B530E43D9194DFD834F2E76DFF9F908EE5EFABA359386",

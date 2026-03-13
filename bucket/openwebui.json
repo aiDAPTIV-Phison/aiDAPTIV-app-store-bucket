@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline. It supports various LLM runners like Ollama and OpenAI-compatible APIs, with built-in inference engine for RAG, making it a powerful AI deployment solution.",
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-open-webui",
   "url": [
@@ -7,20 +7,20 @@
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/open_webui/stop.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/open_webui/status.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/open_webui/config.txt",
-    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/OpenWebUI/open-webui_1.0.0.zip"
+    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/OpenWebUI/open-webui_1.0.1.zip"
   ],
   "hash": [
     "5520257168c4bf42f82cdf516be788ea0c62e4b8297e23cc79cbd09a2ce3c666",
     "e107f8ff486156108b1d10193d2732bfa258af5edac3586c72b35dc294b28ba4",
     "a87497cc249c7493c69b5f2100ddeadb07f34897fa7de03f2ebe0c62094b6f9f",
     "4c87ca90481ee55521b0d67aa1f3e27154298750646f772a04a6201f11488428",
-    "6844D69DF0C0D7E45D04AB70D9F38DA7FDFB49E5A550C0E9E80456C8A9F31B8A"
+    "2DFEAF8F7684B35E29DAC3C588523800516B2CCB441606E2E9D1802E3CCDD2E4"
   ],
   "depends": ["python311"],
   "installer": {
     "script": [
       "$openWebuiDir = Join-Path $dir 'open-webui'",
-      "$zipDest = Join-Path $dir 'open-webui_1.0.0.zip'",
+      "$zipDest = Join-Path $dir 'open-webui_1.0.1.zip'",
       "Write-Host '[INFO] Checking for uv...'",
       "$uvCheck = Get-Command uv -ErrorAction SilentlyContinue",
       "if (-not $uvCheck) {",

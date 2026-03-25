@@ -49,6 +49,8 @@ $env:KM_RESULT_DIR = Join-Path $PSScriptRoot 'km'
 $env:KM_SELF_RAG_API_BASE_URL = "http://127.0.0.1:$($config['API_PORT'])"
 $env:NPM_CONFIG_STRICT_SSL = 'false'
 $env:NODE_TLS_REJECT_UNAUTHORIZED = '0'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
 
 $port = $config['PORT']
 

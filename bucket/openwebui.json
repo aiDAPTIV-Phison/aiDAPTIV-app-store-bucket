@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline. It supports various LLM runners like Ollama and OpenAI-compatible APIs, with built-in inference engine for RAG, making it a powerful AI deployment solution.",
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-open-webui",
   "url": [
@@ -22,7 +22,7 @@
   "installer": {
     "script": [
       "$openWebuiDir = Join-Path $dir 'open-webui'",
-      "$zipDest = Join-Path $dir 'open-webui_1.0.1.zip'",
+      "$zipDest = Join-Path $dir 'open-webui_1.0.2.zip'",
       "Write-Host '[INFO] Checking for uv...'",
       "$uvCheck = Get-Command uv -ErrorAction SilentlyContinue",
       "if (-not $uvCheck) {",

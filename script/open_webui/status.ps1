@@ -23,18 +23,26 @@ if ($ScriptDir) {
     $scriptPath = (Get-Location).Path
 }
 
-# Read port from config.txt
-$port = 8080  # Default port
+# Read PORT from config.txt (same parsing as start.ps1)
 $configFile = Join-Path $scriptPath 'config.txt'
-if (Test-Path $configFile) {
-    $configContent = Get-Content $configFile
-    foreach ($line in $configContent) {
-        if ($line -match '^\s*PORT\s*=\s*(\d+)\s*$') {
-            $port = [int]$matches[1]
-            break
-        }
+if (-not (Test-Path $configFile)) {
+    Write-Error "config.txt not found at $configFile"
+    exit 1
+}
+$config = @{}
+Get-Content $configFile | ForEach-Object {
+    if ($_ -match '^\s*([^=]+)=(.*)$') {
+        $key = $matches[1].Trim()
+        $value = $matches[2].Trim()
+        $value = $value -replace '\$dir', $scriptPath
+        $config[$key] = $value
     }
 }
+if (-not $config.ContainsKey('PORT') -or [string]::IsNullOrWhiteSpace($config['PORT'])) {
+    Write-Error "Required configuration variable PORT is missing in config.txt"
+    exit 1
+}
+$port = [int]$config['PORT']
 
 # Check if port is accessible with longer timeout
 $isRunning = $false

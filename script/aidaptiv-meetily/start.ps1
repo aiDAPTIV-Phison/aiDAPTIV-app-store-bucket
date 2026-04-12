@@ -1,10 +1,10 @@
 $ErrorActionPreference = 'Stop'
 
-$exePath = Join-Path $PSScriptRoot 'meetily\meetily.exe'
+$exePath = Join-Path $PSScriptRoot 'aidaptiv-meetily\aidaptiv-meetily.exe'
 
 # Start meetily
-$stdoutLog = Join-Path $PSScriptRoot 'meetily.log'
-$stderrLog = Join-Path $PSScriptRoot 'meetily.err.log'
+$stdoutLog = Join-Path $PSScriptRoot 'aidaptiv-meetily.log'
+$stderrLog = Join-Path $PSScriptRoot 'aidaptiv-meetily.err.log'
 
 if (Test-Path $exePath) {
   $processParams = @{
@@ -15,7 +15,7 @@ if (Test-Path $exePath) {
   }
   Start-Process @processParams
 } else {
-  Write-Error "meetily.exe not found at: $exePath"
+  Write-Error "aidaptiv-meetily.exe not found at: $exePath"
   exit 1
 }
 

@@ -1,25 +1,25 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A privacy-first AI meeting assistant that captures, transcribes, and summarizes meetings entirely on your infrastructure. Built by expert AI engineers passionate about data sovereignty and open source solutions. Perfect for enterprises that need advanced meeting intelligence without compromising on privacy, compliance, or control.",
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-meeting-minutes",
   "url": [
-    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/Meetily/meetily_1.0.0_x64-setup.exe",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/meetily/start.ps1",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/meetily/stop.ps1",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/meetily/status.ps1"
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-meeting-minutes/releases/download/v1.0.1_cr1/aiDAPTIV.Meetily_1.0.1_x64-setup.exe",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/aidaptiv-meetily/start.ps1",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/aidaptiv-meetily/stop.ps1",
+    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/aidaptiv-meetily/status.ps1"
   ],
   "hash": [
-    "01C26206DEDE8DEC87F4B22FE9B0DE442A56F6280558460300405ACE75BCD4E9",
+    "58636f7bdc27977bc069f36b3cf551a4ac374e06ccfec42026bb7f67ea4e7c88",
     "30c6bd6d48795b8438c55faed0e95b0277cb0a592026df326df198c986cf20f5",
     "32c9a4d1fe8bb24d6604a7f9b4429bd9cd06a985056849983654bc3879b0bf0a",
     "e8d36f269522c6eb4eb5bc7397efdaced18cfe5f394912b8f725408edc0be7dd"
   ],
   "installer": {
-    "script": ["& \"$dir\\meetily_1.0.0_x64-setup.exe\" /S /D=\"$dir\\meetily\""]
+    "script": ["& \"$dir\\aiDAPTIV.Meetily_1.0.1_x64-setup.exe\" /S /D=\"$dir\\aidaptiv-meetily\""]
   },
   "pre_uninstall": [
     "if (Test-Path \"$dir\\stop.ps1\") { & \"$dir\\stop.ps1\" | Out-Null; Start-Sleep -Seconds 2 }",
-    "if (Test-Path \"$dir\\meetily\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\meetily\\uninstall.exe\" -ArgumentList '/S' }",
+    "if (Test-Path \"$dir\\aidaptiv-meetily\\uninstall.exe\") { Start-Process -Wait -FilePath \"$dir\\aidaptiv-meetily\\uninstall.exe\" -ArgumentList '/S' }",
     "if (Test-Path \"$dir\\status.ps1\") { Remove-Item -Path \"$dir\\status.ps1\" -Force -ErrorAction SilentlyContinue }"
   ]
 }

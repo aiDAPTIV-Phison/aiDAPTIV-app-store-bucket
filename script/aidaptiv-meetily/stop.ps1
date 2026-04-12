@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
-$exePath = Join-Path $PSScriptRoot 'meetily\meetily.exe'
+$exePath = Join-Path $PSScriptRoot 'aidaptiv-meetily\aidaptiv-meetily.exe'
 
 # Stop meetily.exe by exact executable path
 $stopped = Get-CimInstance Win32_Process |
@@ -11,6 +11,6 @@ $stopped = Get-CimInstance Win32_Process |
   }
 
 # Fallback: stop any remaining meetily process by name
-Stop-Process -Name 'meetily' -Force -ErrorAction SilentlyContinue
+Stop-Process -Name 'aidaptiv-meetily' -Force -ErrorAction SilentlyContinue
 
-Write-Host ("Stopped processes: meetily.exe={0}" -f @($stopped).Count)
+Write-Host ("Stopped processes: aidaptiv-meetily.exe={0}" -f @($stopped).Count)

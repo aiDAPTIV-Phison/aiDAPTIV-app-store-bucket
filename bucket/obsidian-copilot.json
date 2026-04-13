@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "aiDAPTIV+ Integration for Obsidian - AI-powered assistant plugin with local LLM support",
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-Obsidian",
   "url": [
@@ -67,8 +67,9 @@
     "if (Test-Path $ObsidianConfig) {",
     "  Write-Host '[OK] Obsidian config file found!' -ForegroundColor Green",
     "} else {",
-    "  Write-Host '[WARNING] Obsidian config file not found. No Vaults to install to yet.' -ForegroundColor Yellow",
-    "  Write-Host '[INFO] Plugin files will be ready. Please open Obsidian and create a Vault, then re-run the installer.' -ForegroundColor Yellow",
+    "  Write-Host '[ERROR] Obsidian Vault not found. Please launch Obsidian and create a Vault first.' -ForegroundColor Red",
+    "  Write-Host '[INFO] After creating a Vault in Obsidian, re-run the installer.' -ForegroundColor Yellow",
+    "  throw 'Obsidian Vault not found. Please launch Obsidian and create a Vault, then re-run the installer.'",
     "}"
   ],
   "installer": {
@@ -85,7 +86,8 @@
       "$skippedCount = 0",
       "$errorCount = 0",
       "if (-not (Test-Path $ObsidianConfig)) {",
-      "  Write-Host '[WARNING] No Obsidian config found. Skipping Vault installation.' -ForegroundColor Yellow",
+      "  Write-Host '[ERROR] No Obsidian config found. Cannot deploy plugin without a Vault.' -ForegroundColor Red",
+      "  throw 'Obsidian Vault not found. Please launch Obsidian and create a Vault, then re-run the installer.'",
       "} else {",
       "$obsidianConfigContent = Get-Content $ObsidianConfig -Raw | ConvertFrom-Json",
       "foreach ($vault in $obsidianConfigContent.vaults.PSObject.Properties) {",
@@ -172,8 +174,5 @@
     "Write-Host ''",
     "Write-Host 'Installation script completed.' -ForegroundColor Green"
   ],
-  "pre_uninstall": [
-    "& \"$dir\\stop.ps1\"",
-    "& \"$dir\\uninstall.ps1\""
-  ]
+  "pre_uninstall": ["& \"$dir\\stop.ps1\"", "& \"$dir\\uninstall.ps1\""]
 }

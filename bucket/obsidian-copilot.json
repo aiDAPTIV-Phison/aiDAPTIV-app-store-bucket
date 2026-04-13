@@ -141,7 +141,12 @@
       "Write-Host \"Total Vaults found: $vaultCount\" -ForegroundColor White",
       "Write-Host \"Newly installed/updated: $installedCount\" -ForegroundColor Green",
       "if ($errorCount -gt 0) { Write-Host \"Installation failed: $errorCount\" -ForegroundColor Red }",
-      "$global:ObsidianInstalledCount = $installedCount"
+      "$global:ObsidianInstalledCount = $installedCount",
+      "if ($installedCount -eq 0) {",
+      "  Write-Host '[ERROR] Plugin was not installed to any Vault.' -ForegroundColor Red",
+      "  Write-Host '[INFO] Please open Obsidian to initialize your Vault folder, then re-run the installer.' -ForegroundColor Yellow",
+      "  exit 1",
+      "}"
     ]
   },
   "post_install": [
@@ -166,10 +171,14 @@
     "      $verifiedCount++",
     "    }",
     "  }",
-    "  if ($verifiedCount -eq $totalCount) {",
+    "  if ($totalCount -eq 0) {",
+    "    Write-Host '[ERROR] No valid Vault paths found. Please open Obsidian to initialize your Vault.' -ForegroundColor Red",
+    "    exit 1",
+    "  } elseif ($verifiedCount -eq $totalCount) {",
     "    Write-Host \"[SUCCESS] Plugin verified in all Vaults ($verifiedCount/$totalCount)\" -ForegroundColor Green",
     "  } else {",
     "    Write-Host \"[WARNING] Plugin verified in $verifiedCount/$totalCount Vaults\" -ForegroundColor Yellow",
+    "    exit 1",
     "  }",
     "}",
     "Write-Host ''",

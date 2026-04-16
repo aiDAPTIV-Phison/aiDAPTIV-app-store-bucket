@@ -3,14 +3,14 @@
   "description": "aiDAPTIV+ Integration for Obsidian - AI-powered assistant plugin with local LLM support",
   "homepage": "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-Obsidian",
   "url": [
-    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/Obsidian_Copilot_Plugin/aiDAPTIV-Integration-Obsidian_1.0.1.zip",
+    "https://github.com/user-attachments/files/26672205/aiDAPTIV-Integration-Obsidian_v1.0.2.zip",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/obsidian-copilot/start.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/obsidian-copilot/status.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/obsidian-copilot/stop.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/obsidian-copilot/uninstall.ps1"
   ],
   "hash": [
-    "c7fa9edbcb7861ec35e2c00b65fd2eda08fa449fab97c63b86e600de0db216dd",
+    "9df80a63a9fbbdaee44a6667e87a18ea1ced71996485fc558b11d16c59fa7691",
     "38efb92115237eb8c255857f4bd4da2b99fdacb7edb9b39fe53c141da647f47e",
     "5afde5b62644b6d32fb594bc66d490f08b6d3caa9632da489c34b2bc91711dac",
     "df605a799629ed2cea93aa444a9c03af7992847a8668b75b28f46f18de5778fe",

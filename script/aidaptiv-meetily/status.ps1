@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 # Check if meetily process exists by name
 try {
-  $procs = Get-Process -Name 'meetily' -ErrorAction SilentlyContinue
+  $procs = Get-Process -Name 'aidaptiv-meetily' -ErrorAction SilentlyContinue
   $isRunning = ($procs -ne $null -and $procs.Count -gt 0)
 } catch {
   $isRunning = $false

@@ -129,7 +129,7 @@ Write-Host "KM Service: http://127.0.0.1:$($env:API_PORT)"
 # Health check and auto-open browser
 $healthUrl = "http://127.0.0.1:$port/health"
 $healthUrl2 = "http://127.0.0.1:$($env:API_PORT)/health"
-$attemptDelay = 2
+$attemptDelay = 5
 $attempt = 0
 $isHealthy = $false
 $timeoutSeconds = 180  # 3 minutes timeout

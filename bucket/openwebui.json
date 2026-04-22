@@ -7,7 +7,7 @@
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/open_webui/stop.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/open_webui/status.ps1",
     "https://github.com/aiDAPTIV-Phison/aiDAPTIV-app-store-bucket/raw/refs/heads/main/script/open_webui/config.txt",
-    "https://github.com/aiDAPTIV-Phison/aiDAPTIV-Integration-open-webui/releases/download/v1.0.3/open-webui_1.0.3.zip"
+    "https://phison-software-bucket.s3.ap-northeast-1.amazonaws.com/aiDAPTIVAppStore/Staged/OpenWebUI/open-webui_1.0.3.zip"
   ],
   "hash": [
     "cbb7a85dfc8d19508f7f7d0cf90f956358aa5095440ef606c516bfad7b157ac8",
